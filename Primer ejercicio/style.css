@@ -60,9 +60,33 @@ h1 span {
 .col {
     width: 100%;
 }
+
 .tarjeta {
-    padding: 2 rem;
+    padding: 2rem;
     border-top: 8px solid #549ef2;
     border-radius: 0.5rem;
     box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta__titulo {
+    font-size: 1.6rem;
+}
+
+.tarjeta__texto {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tarjeta__imagen {
+    display: block;
+    margin-left: auto;
+    margin-top: 1rem;
+}
+
+/*Media*/
+
+@media(max-width: 1100px) {
+    .grupo {
+        flex-wrap: wrap;
+    }
 }
