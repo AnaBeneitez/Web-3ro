@@ -38,7 +38,7 @@ li {
 form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 400px;
 }
 label {
   margin-bottom: 10px;
@@ -72,6 +72,11 @@ h1 {
   color: hsl(234, 29%, 20%);
 }
 
+p {
+  font-size: 15px;
+  width: 400px;
+}
+
 @media (max-width: 768px) {
   .card {
     flex-direction: column-reverse;
@@ -85,7 +90,7 @@ h1 {
   .card h1 {
     font-size: 30px;
   }
-  .right {
+  .right, .right p {
     width: 100%;
     padding: 20px;
   }
@@ -96,6 +101,6 @@ h1 {
     content: url("./assets/images/illustration-sign-up-mobile.svg");
   }
   form {
-    width: 90%;
+    width: 100%;
   }
 }
