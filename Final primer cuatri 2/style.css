@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.image {
+    grid-area: image;
+    max-width: fit-content;
+}
+
+img {
+    width: 600px;
+    max-width: fit-content;
+}
+
+.card {
+    width: 600px;
+    min-width: fit-content;
+}
+
+
+.text {
+    grid-area: text;
+    max-width: min-content;
+    min-width: max-content;
+    padding: 2px;
+    margin: 5px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.text h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2d2d4e;
+}
+
+.text p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.text ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.text ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left; 
+    color: #2d2d4e;
+}
+
+.text ul li:before {
+    content: url(images/icon-list.svg);
+    margin-right: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f1f52;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+}
+
+/*queires*/
+
+@media (width >= 600px) or (orientation: landscape) {
+    body {
+       background-color: #2d2a36;
+       display: flex;
+       justify-content: center;
+       align-content: center;
+       min-width: fit-content;
+    }
+   
+    img {
+       content: url(images/illustration-sign-up-desktop.svg);
+       padding: 5px;
+       width: 100%;
+       max-width: fit-content;
+       aspect-ratio: auto;
+       border-radius: 0%;
+       border: 0px solid;
+    }
+   
+    .card {
+       background-color: white;
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       column-gap: 10px;
+       grid-template-areas: "text image";
+       padding: 10px;
+       margin: 10px;
+       justify-items: center;
+       align-items: center;
+       width: 90%;
+       max-width: 900px;
+       min-width: fit-content;
+       border-radius: 10px;
+     }
+   
+     .container {
+       display: grid;
+       width: 80%;
+       min-width: fit-content;
+       max-width: 900px;
+       max-height: 650px;
+     }
+
+     button {
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(to right, #f77062, #fe5196);
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        width: 100%;
+    }
+    
+    button:hover {
+        background: linear-gradient(to right, #fe5196, #f77062);
+    }
+   
+}
