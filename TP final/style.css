@@ -76,16 +76,42 @@ p {
   font-size: 15px;
   width: 400px;
 }
+.hide {
+  display: none;
+}
+.confirm-card {
+  background-color: white;
+  width: 500px;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+}
+.confirm-card h1 {
+  font-size: 40px;
+}
+.icon-confirm-card {
+  width: 50px;
+}
+.confirm-card button {
+  width: 100%;
+}
 
 @media (max-width: 768px) {
   .card {
     flex-direction: column-reverse;
-    width: 95%;
+    width: 90%;
     padding: 0;
   }
   body {
+    display: flex;
     padding: 0;
-    margin: 0;
+    margin: auto;
+    min-width: max-content;
+    max-width: min-content;
+    justify-content: center;
+    align-items: center;
   }
   .card h1 {
     font-size: 30px;
@@ -102,5 +128,12 @@ p {
   }
   form {
     width: 100%;
+  }
+  .confirm-card {
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
   }
 }

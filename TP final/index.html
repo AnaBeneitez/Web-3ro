@@ -29,15 +29,35 @@
         <img src="./assets/images/illustration-sign-up-desktop.svg" alt=""/>
       </div>
     </div>
-    <script>
-        const form = document.querySelector("form");
 
-        form.addEventListener("submit", (e) => {
+    <div class="confirm-card hide">
+      <img src="./assets/images/icon-success.svg" class="icon-card-2" />
+      <h1>Thanks for subscribing!</h1>
+      <p id="message"></p>
+      <button onclick="DismissMessage()">Dismiss message</button>
+    </div>
+
+    <script>
+      const form = document.querySelector("form");
+      const card_1 = document.querySelector(".card");
+      const card_2 = document.querySelector(".confirm-card");
+      form.addEventListener("submit", (e) => {
         e.preventDefault();
-        alert("Thanks for subscribing!")
-        form.reset();
-        });
-        
+        card_1.classList.add("hide");
+
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message");
+
+        message.innerHTML = `Welcome ${email}!
+                            <br> Check your email to confirm.`;
+        card_2.classList.remove("hide");
+
+      });
+
+      function DismissMessage() {
+        card_2.classList.add("hide");
+        card_1.classList.remove("hide");
+      }
     </script>
   </body>
 </html>
