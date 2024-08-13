@@ -20,8 +20,7 @@
         </ul>
         <form>
           <label for="email"> Email address</label>
-          <input type= "email" id="email" placeholder="  email@company.com" required/>
-          
+          <input type= "email" id="email" placeholder="email@company.com" required/>
           <button type="submit">Subcribe to monthly newsletter</button>
         </form>
       </div>
@@ -29,9 +28,7 @@
         <img src="./assets/images/illustration-sign-up-desktop.svg" alt=""/>
       </div>
     </div>
-
     <div class="confirm-card hide">
-      <img src="./assets/images/icon-success.svg" class="icon-card-2" />
       <h1>Thanks for subscribing!</h1>
       <p id="message"></p>
       <button onclick="DismissMessage()">Dismiss message</button>
@@ -51,7 +48,7 @@
         message.innerHTML = `Welcome ${email}!
                             <br> Check your email to confirm.`;
         card_2.classList.remove("hide");
-
+        form.reset();
       });
 
       function DismissMessage() {
